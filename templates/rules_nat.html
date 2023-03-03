@@ -1,0 +1,105 @@
+{% extends "template.html"}
+{% block title %}IPTables > Règles NAT{% endblock %}
+{% block content %}
+  <section>
+    <div class="container">
+      <div class="row">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Règles NAT</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-header">
+              Voici les règles de NAT du système
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Voici les règles de NAT du système</h5>
+              <p class="card-text">
+
+              <table id="myTab" class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Nom de la règle</th>
+                    <th>Type</th>
+                    <th>Adresse IP</th>
+                    <th>Port</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>NAT le port 22 sur le serveur Web1</td>
+                    <td>Source NAT</td>
+                    <td>10.0.0.1</td>
+                    <td>22</td>
+                  </tr>
+                  <tr>
+                    <td>NAT le port 443 sur le serveur Web1</td>
+                    <td>Source NAT</td>
+                    <td>10.0.0.1</td>
+                    <td>443</td>
+                  </tr>
+                  <tr>
+                    <td>NAT le port 80 sur le serveur Web1</td>
+                    <td>Dest NAT</td>
+                    <td>10.0.0.1</td>
+                    <td>80</td>
+                  </tr>
+                  <tr>
+                    <td>NAT le port 22 sur le serveur Web2</td>
+                    <td>Source NAT</td>
+                    <td>10.0.0.2</td>
+                    <td>22</td>
+                  </tr>
+                  <tr>
+                    <td>NAT le port 443 sur le serveur Web2</td>
+                    <td>Dest NAT</td>
+                    <td>10.0.0.2</td>
+                    <td>443</td>
+                  </tr>
+                  <tr>
+                    <td>NAT le port 80 sur le serveur Web2</td>
+                    <td>Dest NAT</td>
+                    <td>10.0.0.2</td>
+                    <td>80</td>
+                  </tr>
+                  <tr>
+                    <td>NAT le port 22 sur le serveur LB</td>
+                    <td>Source NAT</td>
+                    <td>10.0.0.10</td>
+                    <td>22</td>
+                  </tr>
+                  <tr>
+                    <td>NAT le port 443 sur le serveur LB</td>
+                    <td>Dest NAT</td>
+                    <td>10.0.0.10</td>
+                    <td>443</td>
+                  </tr>
+                  <tr>
+                    <td>NAT le port 80 sur le serveur LB</td>
+                    <td>Source NAT</td>
+                    <td>10.0.0.10</td>
+                    <td>80</td>
+                  </tr>
+                  <tr>
+                    <td>NAT le port 1433 sur le serveur SQL</td>
+                    <td>Dest NAT</td>
+                    <td>10.0.0.20</td>
+                    <td>1433</td>
+                  </tr>
+                </tbody>
+              </table>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

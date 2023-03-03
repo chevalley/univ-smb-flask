@@ -1,0 +1,94 @@
+{% extends "template.html" %}
+{% block title %}IPTables > Alias{% endblock %}
+{% block content %}
+  <section>
+    <div class="container">
+      <div class="row">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Alias</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-header">
+              Voici les alias du système
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Voici les alias du système</h5>
+              <p class="card-text">
+
+              <table id="myTab" class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Nom de l'alias</th>
+                    <th>Adresse IP</th>
+                    <th>Port</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>WebServer1_SSH</td>
+                    <td>10.0.0.1</td>
+                    <td>22</td>
+                  </tr>
+                  <tr>
+                    <td>WebServer1_HTTPS</td>
+                    <td>10.0.0.1</td>
+                    <td>443</td>
+                  </tr>
+                  <tr>
+                    <td>WebServer1_HTTP</td>
+                    <td>10.0.0.1</td>
+                    <td>80</td>
+                  </tr>
+                  <tr>
+                    <td>WebServer2_SSH</td>
+                    <td>10.0.0.2</td>
+                    <td>22</td>
+                  </tr>
+                  <tr>
+                    <td>WebServer2_HTTPS</td>
+                    <td>10.0.0.2</td>
+                    <td>443</td>
+                  </tr>
+                  <tr>
+                    <td>WebServer2_HTTP</td>
+                    <td>10.0.0.2</td>
+                    <td>80</td>
+                  </tr>
+                  <tr>
+                    <td>LoadBalancer_SSH</td>
+                    <td>10.0.0.10</td>
+                    <td>22</td>
+                  </tr>
+                  <tr>
+                    <td>LoadBalancer_HTTPS</td>
+                    <td>10.0.0.10</td>
+                    <td>443</td>
+                  </tr>
+                  <tr>
+                    <td>LoadBalancer_HTTP</td>
+                    <td>10.0.0.10</td>
+                    <td>80</td>
+                  </tr>
+                  <tr>
+                    <td>DB1_SQL</td>
+                    <td>10.0.0.20</td>
+                    <td>1433</td>
+                  </tr>
+                </tbody>
+              </table>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

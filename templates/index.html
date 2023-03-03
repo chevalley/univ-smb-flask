@@ -1,0 +1,43 @@
+{% extends "template.html" %}
+{% block title %}IPTables Management{% endblock %}
+{% block content %}
+  <section>
+    <div class="container">
+      <div class="row">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Informations système</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-header">
+              Voici un récapitulatif du système
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Voici un récapitulatif du système</h5>
+              <p class="card-text">
+              <ul>
+                <li>Nom de la machine : blabla</li>
+                <li>CPU Utilisé : 10%</li>
+                <li>Load average : 0.10 1 2</li>
+                <li>CPU Utilisé : 10%</li>
+                <li>Mémoire utilisée : 2go</li>
+                <li>SWAP : 1go</li>
+              </ul>
+              </p>
+              <div class="alert alert-primary" role="alert">
+                Nous avons 256 règles
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

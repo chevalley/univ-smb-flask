@@ -1,0 +1,136 @@
+{% extends "template.html" %}
+{% block title %}IPTables > Règles Filter{% endblock %}
+{% block content %}
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Règles Filter</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-header">
+              Voici les règles de Filter du système
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Voici les règles de Filter du système</h5>
+              <p class="card-text">
+
+              <table id="myTab" class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Nom de l'alias</th>
+                    <th>Adresse IP Source</th>
+                    <th>Port Source</th>
+                    <th>Adresse IP Destination</th>
+                    <th>Port Destination</th>
+                    <th>Etat</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Refuser tout</td>
+                    <td>*</td>
+                    <td>*</td>
+                    <td>*</td>
+                    <td>*</td>
+                    <td>DENY</td>
+                  </tr>
+                  <tr>
+                    <td>Autoriser le port 22 sur le serveur Web1</td>
+                    <td>*</td>
+                    <td>*</td>
+                    <td>10.0.0.1</td>
+                    <td>22</td>
+                    <td>ACCEPT</td>
+                  </tr>
+                  <tr>
+                    <td>Autoriser le port 443 sur le serveur Web1</td>
+                    <td>*</td>
+                    <td>*</td>
+                    <td>10.0.0.1</td>
+                    <td>443</td>
+                    <td>ACCEPT</td>
+                  </tr>
+                  <tr>
+                    <td>Autoriser le port 80 sur le serveur Web1</td>
+                    <td>*</td>
+                    <td>*</td>
+                    <td>10.0.0.1</td>
+                    <td>80</td>
+                    <td>ACCEPT</td>
+                  </tr>
+                  <tr>
+                    <td>Autoriser le port 22 sur le serveur Web2</td>
+                    <td>*</td>
+                    <td>*</td>
+                    <td>10.0.0.2</td>
+                    <td>22</td>
+                    <td>ACCEPT</td>
+                  </tr>
+                  <tr>
+                    <td>Autoriser le port 443 sur le serveur Web2</td>
+                    <td>*</td>
+                    <td>*</td>
+                    <td>10.0.0.2</td>
+                    <td>443</td>
+                    <td>ACCEPT</td>
+                  </tr>
+                  <tr>
+                    <td>Autoriser le port 80 sur le serveur Web2</td>
+                    <td>*</td>
+                    <td>*</td>
+                    <td>10.0.0.2</td>
+                    <td>80</td>
+                    <td>ACCEPT</td>
+                  </tr>
+                  <tr>
+                    <td>Autoriser le port 22 sur le serveur LB</td>
+                    <td>*</td>
+                    <td>*</td>
+                    <td>10.0.0.10</td>
+                    <td>22</td>
+                    <td>ACCEPT</td>
+                  </tr>
+                  <tr>
+                    <td>Autoriser le port 443 sur le serveur LB</td>
+                    <td>*</td>
+                    <td>*</td>
+                    <td>10.0.0.10</td>
+                    <td>443</td>
+                    <td>ACCEPT</td>
+                  </tr>
+                  <tr>
+                    <td>Autoriser le port 80 sur le serveur LB</td>
+                    <td>*</td>
+                    <td>*</td>
+                    <td>10.0.0.10</td>
+                    <td>80</td>
+                    <td>ACCEPT</td>
+                  </tr>
+                  <tr>
+                    <td>Autoriser le port 1433 sur le serveur SQL</td>
+                    <td>*</td>
+                    <td>*</td>
+                    <td>10.0.0.20</td>
+                    <td>1433</td>
+                    <td>ACCEPT</td>
+                  </tr>
+                </tbody>
+              </table>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
