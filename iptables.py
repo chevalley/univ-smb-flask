@@ -1,11 +1,25 @@
 # save this as app.py
 from flask import Flask
 from flask import render_template
+from flask import session
+import base64
 app = Flask(__name__)
 
 @app.route("/")
 def start():
-    return render_template('index.html')
+    if 'loggedin' in session : 
+        return render_template('index.html')
+    return render_template('login.html')
+    
+@app.route("/log", method=["GET", "POST"])
+def testlogin():
+    with open("data.txt", "r") as fichier:
+        for line in fichier:
+            datalog = base64.b64decode(line).decode()
+    if request.method == "POST" :
+        testlog = request.form["login"]+request.form["pwd"]
+        session["loggedin"] = True
+    return redirect(url_for("start"))
 
 @app.route("/alias")
 def alias():
